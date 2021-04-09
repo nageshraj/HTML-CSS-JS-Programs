@@ -1,0 +1,35 @@
+<html>
+
+ <head>
+    <!-- <title>Hello</title> -->
+
+</head> 
+
+<body>
+    <form id="nameForm" onsubmit="return validateName()">
+        Name: <input id="nameInput" type="text"><br>
+        <span id="nameSpan" style="color: blue;">
+
+        </span>
+        <input type="submit">
+    </form>
+
+    <script>
+        function validateName() {
+            var name = document.getElementById("nameInput").value;
+
+            if (name == "") {
+                document.getElementById("nameSpan").innerHTML = "Invalid name";
+                return false;
+
+            } else {
+                document.getElementById("nameSpan").innerHTML = "Valid name";
+                return true;
+            }
+            
+        }
+    </script>
+
+</body>
+
+</html>
